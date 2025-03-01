@@ -9,7 +9,7 @@ public class Product
     public Guid Id { get; set; }
 
     [Required(ErrorMessage = "Product name is a required field.")]
-    [MaxLength(100, ErrorMessage = "Maximum length for the Name is 100 characters.")]
+    [MaxLength(200, ErrorMessage = "Maximum length for the Name is 100 characters.")]
     public string? Name { get; set; }
 
     [Required(ErrorMessage = "Product description is a required field.")]
