@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballECommerce", "BaseballECommerce\BaseballECommerce.csproj", "{34F6AE01-5246-494D-A8DC-F0A20E220E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingService", "LoggingService\LoggingService.csproj", "{072EAD6B-61AF-473D-9F6A-2C79FA515F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballEcommerce.Core.Domain", "BaseballEcommerce.Core.Domain\BaseballEcommerce.Core.Domain.csproj", "{CBDFA335-A940-47C0-ACDB-78B2CC2D978C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballECommerce.Infrastructure.Persistence", "BaseballECommerce.Infrastructure.Persistence\BaseballECommerce.Infrastructure.Persistence.csproj", "{9FBF3D62-A2AE-478D-A362-C813B0BCA32B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{34F6AE01-5246-494D-A8DC-F0A20E220E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34F6AE01-5246-494D-A8DC-F0A20E220E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34F6AE01-5246-494D-A8DC-F0A20E220E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072EAD6B-61AF-473D-9F6A-2C79FA515F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072EAD6B-61AF-473D-9F6A-2C79FA515F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072EAD6B-61AF-473D-9F6A-2C79FA515F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072EAD6B-61AF-473D-9F6A-2C79FA515F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDFA335-A940-47C0-ACDB-78B2CC2D978C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDFA335-A940-47C0-ACDB-78B2CC2D978C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDFA335-A940-47C0-ACDB-78B2CC2D978C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDFA335-A940-47C0-ACDB-78B2CC2D978C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FBF3D62-A2AE-478D-A362-C813B0BCA32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBF3D62-A2AE-478D-A362-C813B0BCA32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBF3D62-A2AE-478D-A362-C813B0BCA32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBF3D62-A2AE-478D-A362-C813B0BCA32B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
