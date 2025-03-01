@@ -13,7 +13,7 @@ public class Product
     public string? Name { get; set; }
 
     [Required(ErrorMessage = "Product description is a required field.")]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     [Required]
     [Display(Name = "Product Price")]
@@ -25,4 +25,9 @@ public class Product
     public Category? Category { get; set; }
 
     // url: how to store images of products? as string urL?
+    [Required(ErrorMessage = "Users should be able to see image of product")]
+    public string? ImageUrl { get; set; }
+
+    [Required(ErrorMessage = "How many items are in stock?")]
+    public int StockQuantity { get; set; }
 }
