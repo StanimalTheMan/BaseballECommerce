@@ -1,4 +1,8 @@
-﻿using LoggingService;
+﻿using BaseballEcommerce.Core.Domain.Repositories;
+using BaseballECommerce.Core.Services;
+using BaseballECommerce.Core.Services.Abstractions;
+using BaseballECommerce.Infrastructure.Persistence;
+using LoggingService;
 
 namespace BaseballECommerce.Extensions;
 
@@ -21,4 +25,11 @@ public static class ServiceExtensions
 
     public static void ConfigureLoggerService(this IServiceCollection services) =>
         services.AddSingleton<ILoggerManager, LoggerManager>();
+
+
+    public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+        services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+    public static void ConfigureServiceManager(this IServiceCollection services) =>
+        services.AddScoped<IServiceManager, ServiceManager>();
 }

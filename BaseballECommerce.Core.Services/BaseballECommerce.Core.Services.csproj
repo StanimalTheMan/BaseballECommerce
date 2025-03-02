@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseballEcommerce.Core.Domain\BaseballEcommerce.Core.Domain.csproj" />
+    <ProjectReference Include="..\BaseballECommerce.Core.Services.Abstractions\BaseballECommerce.Core.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\LoggingService\LoggingService.csproj" />
+  </ItemGroup>
+
+</Project>
