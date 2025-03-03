@@ -1,4 +1,5 @@
-﻿using BaseballEcommerce.Core.Domain.Repositories;
+﻿using AutoMapper;
+using BaseballEcommerce.Core.Domain.Repositories;
 using BaseballECommerce.Core.Services.Abstractions;
 using LoggingService;
 
@@ -9,10 +10,10 @@ public sealed class ServiceManager : IServiceManager
     private readonly Lazy<ICategoryService> _categoryService;
     private readonly Lazy<IProductService> _productService;
 
-    public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager logger)
+    public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager logger, IMapper mapper)
     {
-        _categoryService = new Lazy<ICategoryService>(() => new CategoryService(repositoryManager, logger));
-        _productService = new Lazy<IProductService>(() => new ProductService(repositoryManager, logger));
+        _categoryService = new Lazy<ICategoryService>(() => new CategoryService(repositoryManager, logger, mapper));
+        _productService = new Lazy<IProductService>(() => new ProductService(repositoryManager, logger, mapper));
     }
 
     public ICategoryService CategoryService => _categoryService.Value;

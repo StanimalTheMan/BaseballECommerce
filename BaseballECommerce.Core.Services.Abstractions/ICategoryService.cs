@@ -1,8 +1,8 @@
-﻿using BaseballEcommerce.Core.Domain.Entities;
+﻿using Shared.DataTransferObjects;
 
 namespace BaseballECommerce.Core.Services.Abstractions;
 
 public interface ICategoryService
 {
-    IEnumerable<Category> GetAllCategories(bool trackChanges);
+    IEnumerable<CategoryDto> GetAllCategories(bool trackChanges);
 }
