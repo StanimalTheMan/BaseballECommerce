@@ -14,15 +14,16 @@ public class CategoriesController : ControllerBase
     [HttpGet]
     public IActionResult GetCategories()
     {
-        try
-        {
-            var categories = _service.CategoryService.GetAllCategories(trackChanges: false);
+        var categories = _service.CategoryService.GetAllCategories(trackChanges: false);
 
-            return Ok(categories);
-        }
-        catch
-        {
-            return StatusCode(500, "Internal server error");
-        }
+        return Ok(categories);
+    }
+
+    [HttpGet("{id:guid}")]
+    public IActionResult GetCategory(Guid id)
+    {
+        var category = _service.CategoryService.GetCategory(id, trackChanges: false);
+
+        return Ok(category);
     }
 }

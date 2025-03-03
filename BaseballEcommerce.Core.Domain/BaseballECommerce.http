@@ -1,0 +1,6 @@
+@BaseballECommerce_HostAddress = http://localhost:5160
+
+GET {{BaseballECommerce_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

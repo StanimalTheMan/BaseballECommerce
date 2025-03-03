@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BaseballEcommerce.Core.Domain.Exceptions;
 using BaseballEcommerce.Core.Domain.Repositories;
 using BaseballECommerce.Core.Services.Abstractions;
 using LoggingService;
@@ -21,18 +22,21 @@ internal class CategoryService : ICategoryService
 
     public IEnumerable<CategoryDto> GetAllCategories(bool trackChanges)
     {
-        try
-        {
-            var categories = _repository.Category.GetAllCategories(trackChanges);
+        var categories = _repository.Category.GetAllCategories(trackChanges);
 
-            var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
+        var categoriesDto = _mapper.Map<IEnumerable<CategoryDto>>(categories);
 
-            return categoriesDto;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError($"Something went wrong in the {nameof(GetAllCategories)} service method {ex}");
-            throw;
-        }
+        return categoriesDto;
+    }
+
+    public CategoryDto GetCategory(Guid id, bool trackChanges)
+    {
+        var category = _repository.Category.GetCategory(id, trackChanges);
+        if (category is null)
+            throw new CategoryNotFoundException(id);
+
+        var categoryDto = _mapper.Map<CategoryDto>(category);
+
+        return categoryDto;
     }
 }

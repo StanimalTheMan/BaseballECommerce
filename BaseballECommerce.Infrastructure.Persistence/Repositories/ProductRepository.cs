@@ -9,4 +9,9 @@ public class ProductRepository : RepositoryBase<Product>, IProductRepository
         : base(repositoryContext)
     { 
     }
+
+    public IEnumerable<Product> GetProducts(Guid categoryId, bool trackChanges) =>
+        FindByCondition(p => p.CategoryId.Equals(categoryId), trackChanges)
+        .OrderBy(p => p.Name)
+        .ToList();
 }

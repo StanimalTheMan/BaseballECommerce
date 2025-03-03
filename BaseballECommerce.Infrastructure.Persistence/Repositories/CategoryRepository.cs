@@ -14,4 +14,8 @@ internal sealed class CategoryRepository : RepositoryBase<Category>, ICategoryRe
         FindAll(trackChanges)
             .OrderBy(c => c.Name)
             .ToList();
+
+    public Category GetCategory(Guid categoryId, bool trackChanges) =>
+        FindByCondition(c => c.Id.Equals(categoryId), trackChanges)
+        .SingleOrDefault();
 }

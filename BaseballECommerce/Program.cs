@@ -1,3 +1,4 @@
+using BaseballECommerce;
 using BaseballECommerce.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using Serilog;
@@ -11,6 +12,8 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 // Add services to the container.
 
@@ -24,9 +27,11 @@ builder.Host.UseSerilog((hostContext, configuration) =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-    app.UseDeveloperExceptionPage();
-else
+//var logger = app.Services.GetRequiredService<ILoggerManager>();
+//app.ConfigureExceptionHandler(logger);
+app.UseExceptionHandler(opt => { });
+
+if (app.Environment.IsProduction())
     app.UseHsts();
 
 // Configure the HTTP request pipeline.
