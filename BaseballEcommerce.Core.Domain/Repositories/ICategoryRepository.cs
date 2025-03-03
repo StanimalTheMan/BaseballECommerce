@@ -1,5 +1,8 @@
-﻿namespace BaseballEcommerce.Core.Domain.Repositories;
+﻿using BaseballEcommerce.Core.Domain.Entities;
+
+namespace BaseballEcommerce.Core.Domain.Repositories;
 
 public interface ICategoryRepository
 {
+    IEnumerable<Category> GetAllCategories(bool trackChanges);
 }

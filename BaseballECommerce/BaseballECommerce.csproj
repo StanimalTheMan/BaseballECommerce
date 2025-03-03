@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BaseballECommerce.Core.Services\BaseballECommerce.Core.Services.csproj" />
     <ProjectReference Include="..\BaseballECommerce.Infrastructure.Persistence\BaseballECommerce.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\BaseballECommerce.Infrastructure.Presentation\BaseballECommerce.Infrastructure.Presentation.csproj" />
     <ProjectReference Include="..\LoggingService\LoggingService.csproj" />
   </ItemGroup>
 
