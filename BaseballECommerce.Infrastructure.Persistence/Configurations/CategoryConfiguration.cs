@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using BaseballEcommerce.Core.Domain.Entities;
 
-namespace BaseballECommerce.Infrastructure.Persistence;
+namespace BaseballECommerce.Infrastructure.Persistence.Configurations;
 
 public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 {

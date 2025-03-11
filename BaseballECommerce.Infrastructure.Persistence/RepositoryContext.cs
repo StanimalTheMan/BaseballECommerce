@@ -1,4 +1,5 @@
 ﻿using BaseballEcommerce.Core.Domain.Entities;
+using BaseballECommerce.Infrastructure.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace BaseballECommerce.Infrastructure.Persistence;
