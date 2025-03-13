@@ -4,10 +4,10 @@
 The app is implemented using Onion architecture.  All of the layers interact with each other via defined interfaces as follows:
 
 Domain Layer - BaseballECommerce.Core.Domain \
-Service Layer - BaseballECommerce.Core.Services, BaseballECommerce.Core.Services.Abstractions \
+Service Layer - BaseballECommerce.Core.Services, BaseballECommerce.Core.Services.Abstractions
 
 Infrastructure Layer \
-Presentation Layer - BaseballECommerce.Infrastructure.Presentation, BaseballECommerce.Infrastructure.Persistence \
+Presentation Layer - BaseballECommerce.Infrastructure.Presentation, BaseballECommerce.Infrastructure.Persistence 
 
 Using dependency injection which flows towards the core of the "Onion", depending on abstractions aka interfaces and not the implementations, we can transparently switch out the implementation at runtime.
 We depend on abstractions at compile time, which gives us strict contracts to work with, and we are provided with implementation at runtime. 
